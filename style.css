@@ -1,0 +1,550 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@500&family=Poppins:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@500&family=Nunito_Sans:wght@600&family=Poppins:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@500&family=Montserrat&family=Nunito+Sans:wght@600&family=Poppins:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@500&family=Montserrat&family=Nunito+Sans:wght@400;600&family=Poppins:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@500&family=Montserrat&family=Nunito+Sans:ital,wght@0,400;0,600;1,400&family=Poppins:wght@600&display=swap');
+:root {
+    --header-height: 3rem;
+    --nav-width: 68px;
+    --first-color: #4723D9;
+    --first-color-light: black;
+    --white-color: black;
+    --body-font: 'Nunito', sans-serif;
+    --normal-font-size: 1rem;
+    --z-fixed: 100
+}
+
+*,
+::before,
+::after {
+    box-sizing: border-box
+}
+
+body {
+    position: relative;
+    margin: var(--header-height) 0 0 0;
+    padding: 0 1rem;
+    font-family: var(--body-font);
+    font-size: var(--normal-font-size);
+    transition: .5s
+}
+
+a {
+    text-decoration: none
+}
+
+.header_toggle {
+    color: black;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+.l-navbar {
+    position: fixed;
+    top: 0;
+    left: -30%;
+    width: var(--nav-width);
+    height: 100vh;
+    background: linear-gradient(180deg, rgba(101, 144, 255, 0.43) -6.06%, rgba(126, 154, 255, 0.47) 21.33%, rgba(197, 199, 255, 0.3) 50.12%, rgba(187, 176, 255, 0.409659) 75.6%, rgba(219, 202, 255, 0.96) 103.99%);
+    padding: .5rem 1rem 0 0;
+    transition: .5s;
+    z-index: var(--z-fixed)
+}
+
+.nav {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    overflow: hidden
+}
+
+.nav_logo,
+.nav_link {
+    display: grid;
+    grid-template-columns: max-content max-content;
+    align-items: center;
+    column-gap: 1rem;
+    padding: .5rem 0 .5rem 1.5rem
+}
+
+.nav_logo {
+    margin-bottom: 2rem
+}
+
+.nav_logo-icon {
+    font-size: 1.25rem;
+    color: var(--white-color)
+}
+
+.nav_logo-name {
+    color: var(--white-color);
+    font-weight: 700;
+    font-family: 'Poppins';
+font-style: normal;
+font-weight: 600;
+font-size: 23.8348px;
+line-height: 36px;
+/* identical to box height */
+
+letter-spacing: 0.25px;
+
+color: #1E2875;
+}
+
+.nav_link {
+    position: relative;
+    color: var(--first-color-light);
+    margin-bottom: 1.5rem;
+    transition: .3s
+}
+
+.nav_link:hover {
+    color: var(--white-color)
+}
+
+.nav_icon {
+    font-size: 1.25rem
+}
+
+.show {
+    left: 0
+}
+
+.body-pd {
+    padding-left: calc(var(--nav-width) + 1rem)
+}
+
+.active {
+    color: var(--white-color)
+}
+
+.active::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    width: 2px;
+    height: 32px;
+    background-color: var(--white-color)
+}
+
+.height-100 {
+    height: 100vh
+}
+
+
+.searchArea::placeholder {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 21px;
+    /* identical to box height */
+    letter-spacing: 0.25px;
+    color: #BDBDBD;
+}
+
+.box-1 {
+    text-align: right;
+}
+
+.box-1 span {
+    padding-right: 1rem;
+}
+
+.box-2 {
+    background-color: white;
+}
+
+.box-2 .birthday-title {
+    background: linear-gradient(91.37deg, rgba(101, 144, 255, 0.43) 13.98%, rgba(126, 154, 255, 0.47) 34.04%, rgba(197, 199, 255, 0.72) 55.12%, rgba(187, 176, 255, 0.409659) 73.79%, rgba(219, 202, 255, 0.96) 94.58%);
+}
+
+.box-2 img {
+    height: 70px;
+}
+
+.left img {
+    height: 30px;
+    width: 30px;
+}
+
+.box-2 .right {
+    padding-inline: 0.8rem;
+}
+
+.box-2 .borderBtm {
+    border-bottom: 0.5px solid #EBEBEB;
+}
+
+.box-2 .right p {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 18px;
+    /* identical to box height */
+    letter-spacing: 0.25px;
+}
+
+.box-2 .right p a {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 10px;
+    line-height: 15px;
+    /* identical to box height */
+    letter-spacing: 0.25px;
+    color: #5630D3;
+}
+
+.box-3 p {
+    font-size: 15px;
+    margin-bottom: 8px;
+}
+
+body {
+    background-color: #E5E5E5;
+}
+
+.box1 input {
+    max-width: 80%;
+    width: 100%;
+    border-radius: 4px;
+    outline: none;
+    border: none;
+}
+
+.mybtn {
+    background: #5630D3;
+    border-radius: 4px;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 21px;
+    /* identical to box height */
+    letter-spacing: 0.25px;
+    color: #FFFFFF;
+}
+
+.box2 img {
+    height: 50px;
+}
+
+.box3-card {
+    background-color: #fff;
+}
+
+.box3 .middle {
+    border-left: 0.5px solid #939393;
+    border-right: 0.5px solid #939393;
+}
+
+.box4 .table thead {
+    background: linear-gradient(91.37deg, rgba(101, 144, 255, 0.43) 13.98%, rgba(126, 154, 255, 0.47) 34.04%, rgba(197, 199, 255, 0.72) 55.12%, rgba(187, 176, 255, 0.409659) 73.79%, rgba(219, 202, 255, 0.96) 94.58%);
+}
+
+.box4 .head-1 {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 17px;
+    line-height: 26px;
+    /* identical to box height */
+    color: #000000;
+}
+
+.boxc1 a {
+    text-decoration: none;
+    color: #272830;
+}
+
+.boxc1 .active {
+    color: #5630D3;
+    border-bottom: 1px solid #5630D3;
+}
+
+.box4 .boxc2 .left1 span {
+    padding: 1rem 0px;
+    transform: rotate(-90deg);
+    display: inline-block;
+}
+
+.box5 .head-1 {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 17px;
+    line-height: 26px;
+    /* identical to box height */
+    color: #000000;
+}
+
+.box5 .table thead {
+    background: linear-gradient(91.37deg, rgba(101, 144, 255, 0.43) 13.98%, rgba(126, 154, 255, 0.47) 34.04%, rgba(197, 199, 255, 0.72) 55.12%, rgba(187, 176, 255, 0.409659) 73.79%, rgba(219, 202, 255, 0.96) 94.58%);
+}
+
+.right p {
+    margin: 0px;
+}
+
+.font-12 {
+    font-size: 12px;
+}
+
+.box-2 h5 {
+    font-size: 12px;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 18px;
+    /* identical to box height */
+    letter-spacing: 0.25px;
+    color: #333333;
+}
+
+.box-3 p {
+    font-size: 10px;
+}
+
+.box-3 .font-12 {
+    font-size: 12px;
+}
+
+.icons {
+    width: 24px;
+    height: 24px;
+}
+
+.birthday-title img {
+    width: 24px;
+    height: 24px;
+}
+
+.box4 .boxc3 {
+    color: #272830;
+}
+
+.box2-card span {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+    letter-spacing: 0.25px;
+    color: #272830;
+}
+
+.box2-card p {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 29px;
+    letter-spacing: 0.25px;
+    color: #272830;
+}
+
+.box3 p {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 18px;
+    /* identical to box height */
+    letter-spacing: 0.25px;
+    color: #333333;
+}
+
+.box3 .no1,
+.box3 .no2,
+.box3 .no3 {
+    font-family: 'Nunito_Sans';
+    font-style: normal;
+    font-weight: 800;
+    font-size: 28px;
+    line-height: 38px;
+    letter-spacing: 0.25px;
+    color: #2E43F8;
+
+}
+
+.box3 .no2 {
+    color: #F5822F;
+}
+
+.box3 .no3 {
+    color: #EE3C04;
+}
+
+.table td {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 21px;
+    letter-spacing: 0.25px;
+    color: #333333;
+}
+
+.table th {
+    font-family: 'Nunito_Sans';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 21px;
+    color: #000000;
+}
+
+.table .text-center td a,
+.boxc3 p a {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 11px;
+    line-height: 16px;
+    letter-spacing: 0.25px;
+    text-decoration-line: underline;
+    color: #1E2875;
+}
+
+.table .text-center td a:hover,
+.boxc3 p a:hover {
+    color: #2E43F8;
+}
+
+.box5 .greenT {
+    color: #118507;
+}
+
+.conversation .boxc2 h4 {
+    font-family: 'Nunito_Sans';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    color: #000000;
+    line-height: 27px;
+}
+
+.conversation .boxc2 p {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 12px;
+    line-height: 18px;
+    letter-spacing: 0.25px;
+    color: #272830;
+}
+
+.conversation .boxc2 span {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 10px;
+    line-height: 15px;
+    text-align: right;
+    letter-spacing: 0.25px;
+    color: #272830;
+}
+
+.conversation .boxc2 .no {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 12px;
+    line-height: 18px;
+    text-align: right;
+    letter-spacing: 0.25px;
+    color: #272830;
+}
+
+.boxc1 a {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 18px;
+    letter-spacing: 0.25px;
+    color: #272830;
+}
+
+.boxc1 .active {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 18px;
+    letter-spacing: 0.25px;
+    color: #5630D3;
+}
+
+.conversation .dropdown span {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 18px;
+    color: #000000;
+}
+
+.profile span {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 17px;
+    line-height: 26px;
+}
+
+.box-4 .datep {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 10px;
+    line-height: 15px;
+    letter-spacing: 0.25px;
+    color: #808080;
+}
+
+.year {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 10px;
+    line-height: 15px;
+    letter-spacing: 0.25px;
+}
+
+
+body {
+    margin: calc(var(--header-height) -0px) 0 0 0;
+    padding-left: calc(var(--nav-width) + 0rem);
+}
+
+.l-navbar {
+    left: 0;
+    padding: 1rem 1rem 0 0
+}
+
+.show {
+    width: calc(var(--nav-width) + 156px)
+}
+
+.body-pd {
+    padding-left: calc(var(--nav-width) + 188px)
+}
+
+.nav .nav_name{
+    font-family: 'Nunito Sans';
+font-style: normal;
+font-weight: 600;
+font-size: 16px;
+line-height: 22px;
+/* identical to box height */
+
+letter-spacing: 0.25px;
+
+color: #333333;
+}
